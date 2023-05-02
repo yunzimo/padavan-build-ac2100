@@ -95,33 +95,61 @@ jobs:
         # 以下选项是定义你需要的功能（y=集成,n=忽略），重新写入到.config文件。
         ####################################################################
         echo "CONFIG_FIRMWARE_INCLUDE_LANG_CN=y" >> configs/templates/$TNAME.config      #设置界面简体中文
-        echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> configs/templates/$TNAME.config          #删除QOS
+        echo "CONFIG_FIRMWARE_INCLUDE_QOS=n" >> configs/templates/$TNAME.config          #QOS
         echo "CONFIG_FIRMWARE_INCLUDE_SMBD36=y" >> configs/templates/$TNAME.config       #使用SMBD36新版本
-        echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=n" >> configs/templates/$TNAME.config     #删除DDNS_SSL
-        echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=n" >> configs/templates/$TNAME.config        #删除HTTPS
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> configs/templates/$TNAME.config      #删除OPENVPN
-        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=y" >> configs/templates/$TNAME.config   #使用FFMPEG新版本
-        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> configs/templates/$TNAME.config       #删除用于IPTV的XUPNPD
-        echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=n" >> configs/templates/$TNAME.config       #删除用于Drcom的工具DOGCOM
-        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> configs/templates/$TNAME.config  #删除SS plus+
-        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> configs/templates/$TNAME.config #删除DNSFORWARDER
-        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> configs/templates/$TNAME.config       #删除用于KMS的工具VLMCSD
-        echo "CONFIG_FIRMWARE_INCLUDE_TTYD=n" >> configs/templates/$TNAME.config         #删除网页终端模拟器TTYD
-        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=n" >> configs/templates/$TNAME.config       #删除用于二级路由、教育网分发IPv6地址的NAPT66
-        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> configs/templates/$TNAME.config       #删除SRELAY
-        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> configs/templates/$TNAME.config        #删除工具SOCAT
-        echo "CONFIG_FIRMWARE_INCLUDE_MTR=y" >> configs/templates/$TNAME.config          #删除工具MTR
-        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> configs/templates/$TNAME.config       #删除工具IPERF3
-        echo "CONFIG_FIRMWARE_INCLUDE_NANO=n" >> configs/templates/$TNAME.config         #删除工具NANO
-        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=n" >> configs/templates/$TNAME.config         #删除工具HTOP
-        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> configs/templates/$TNAME.config        #删除工具LRZSZ
-        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> configs/templates/$TNAME.config         #删除工具CURL
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> configs/templates/$TNAME.config      #删除OPENSSH
-        echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> configs/templates/$TNAME.config         #删除SFTP
-        echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=n" >> configs/templates/$TNAME.config      #删除TCPDUMP
-        echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=n" >> configs/templates/$TNAME.config     #删除EAP_PEAP
-        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> configs/templates/$TNAME.config   #删除OPENSSL_EC
-        echo "CONFIG_FIRMWARE_CPU_900MHZ=n" >> configs/templates/$TNAME.config           #开启超频，仅MT7621可用
+        echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=y" >> configs/templates/$TNAME.config     #DDNS_SSL
+        echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >> configs/templates/$TNAME.config        #HTTPS
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENVPN=n" >> configs/templates/$TNAME.config      #OPENVPN
+        echo "CONFIG_FIRMWARE_INCLUDE_FFMPEG_NEW=n" >> configs/templates/$TNAME.config   #使用FFMPEG新版本
+        echo "CONFIG_FIRMWARE_INCLUDE_XUPNPD=n" >> configs/templates/$TNAME.config       #用于IPTV的XUPNPD
+        echo "CONFIG_FIRMWARE_INCLUDE_DOGCOM=y" >> configs/templates/$TNAME.config       #用于Drcom的工具DOGCOM
+        echo "CONFIG_FIRMWARE_INCLUDE_SHADOWSOCKS=n" >> configs/templates/$TNAME.config  #SS plus+
+        echo "CONFIG_FIRMWARE_INCLUDE_DNSFORWARDER=n" >> configs/templates/$TNAME.config #DNSFORWARDER
+        echo "CONFIG_FIRMWARE_INCLUDE_VLMCSD=n" >> configs/templates/$TNAME.config       #用于KMS的工具VLMCSD
+        echo "CONFIG_FIRMWARE_INCLUDE_TTYD=y" >> configs/templates/$TNAME.config         #网页终端模拟器TTYD
+        echo "CONFIG_FIRMWARE_INCLUDE_NAPT66=y" >> configs/templates/$TNAME.config       #用于二级路由、教育网分发IPv6地址的NAPT66
+        echo "CONFIG_FIRMWARE_INCLUDE_SRELAY=n" >> configs/templates/$TNAME.config       #SRELAY
+        echo "CONFIG_FIRMWARE_INCLUDE_SOCAT=n" >> configs/templates/$TNAME.config        #工具SOCAT
+        echo "CONFIG_FIRMWARE_INCLUDE_MTR=y" >> configs/templates/$TNAME.config          #工具MTR
+        echo "CONFIG_FIRMWARE_INCLUDE_IPERF3=y" >> configs/templates/$TNAME.config       #工具IPERF3
+        echo "CONFIG_FIRMWARE_INCLUDE_NANO=y" >> configs/templates/$TNAME.config         #工具NANO
+        echo "CONFIG_FIRMWARE_INCLUDE_HTOP=y" >> configs/templates/$TNAME.config         #工具HTOP
+        echo "CONFIG_FIRMWARE_INCLUDE_LRZSZ=y" >> configs/templates/$TNAME.config        #工具LRZSZ
+        echo "CONFIG_FIRMWARE_INCLUDE_CURL=y" >> configs/templates/$TNAME.config         #工具CURL
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> configs/templates/$TNAME.config      #OPENSSH
+        echo "CONFIG_FIRMWARE_INCLUDE_SFTP=n" >> configs/templates/$TNAME.config         #SFTP
+        echo "CONFIG_FIRMWARE_INCLUDE_TCPDUMP=y" >> configs/templates/$TNAME.config      #TCPDUMP
+        echo "CONFIG_FIRMWARE_INCLUDE_EAP_PEAP=y" >> configs/templates/$TNAME.config     #EAP_PEAP
+        echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> configs/templates/$TNAME.config   #OPENSSL_EC
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPC=y" >> configs/templates/$TNAME.config       #FRPC
+        echo "CONFIG_FIRMWARE_INCLUDE_FRPS=y" >> configs/templates/$TNAME.config       #FRPS
+        echo "CONFIG_FIRMWARE_CPU_900MHZ=y" >> configs/templates/$TNAME.config           #开启超频，仅MT7621可用
+        #########################################################################################
+        # CURL：一个网络传输工具，支持多种协议，如HTTP、HTTPS、FTP等。
+        # GDUT_DRCOM：广东工业大学校园网认证客户端，用于连接校园网。
+        # DOGCOM：一种用于拨号上网的客户端。
+        # MINIEAP：一种用于无线网络认证的客户端，常用于校园网等场景。
+        # NAPT66：一种用于IPv6 NAT转换的软件包，用于解决IPv4地址不足的问题。
+        # SOFTETHERVPN_SERVER：一种VPN服务器软件包，支持多种协议和加密方式。
+        # SOFTETHERVPN_CLIENT：一种VPN客户端软件包，用于连接到VPN服务器。
+        # SOFTETHERVPN_CMD：一种命令行接口的VPN客户端，用于在终端上连接到VPN服务器。
+        # VLMCSD：一种虚拟机共享软件，用于在局域网内共享虚拟机。
+        # TTYD：一种终端访问工具，支持多种协议，如SSH、Telnet等。
+        # LRZSZ：一个用于文件传输的工具，支持ZMODEM协议。
+        # HTOP：一个类似于top的系统监控工具，可以显示系统进程和资源使用情况。
+        # NANO：一个文本编辑器，用于编辑文本文件。
+        # IPERF3：一个网络性能测试工具，用于测试网络带宽和延迟等指标。
+        # DUMP1090：一个用于ADS-B飞行数据接收的软件包，可用于飞行追踪和航空领域的研究。
+        # RTL_SDR：一个用于软件定义无线电的软件包，可以将计算机转换为无线电接收器。
+        # MTR：一个联合ping和traceroute的网络诊断工具，可以显示网络节点之间的延迟和丢包情况。
+        # SOCAT：一个用于建立双向数据通信的工具，可以用于网络编程和调试等场景。
+        # SRELAY：一个用于在不同协议之间转换数据的工具，可以用于网络编程和调试等场景。
+        # MENTOHUST：一种用于校园网认证的客户端，常用于华中科技大学等学校的校园网。
+        # FRPC：一种用于穿透防火墙的客户端，用于在不同网络之间建立连接。
+        # FRPS：一种用于穿透防火墙的服务器端，用于接受客户端的连接并转发数据。
+        # TUNSAFE：一个用于创建VPN隧道的软件包，支持多种加密方式和协议。
+        # WIREGUARD：一种新型的VPN协议，具有高效、安全和易用等特点。
+        #########################################################################################
         #########################################################################################
         # 自定义添加其它功能请参考源码configs/templates/目录下的config文件。按照上面的格式添加即可
         # https://github.com/hanwckf/rt-n56u/blob/master/trunk/configs/templates/
